@@ -1,30 +1,46 @@
-# Script de Reinício do Explorer para Windows
+# 🔄 Script de Reinício do Explorer para Windows
 
-Este script em lote foi criado para facilitar o reinício do processo Explorer.exe no Windows quando necessário.
+Este é um script `.bat` criado para reiniciar o processo **Explorer.exe** no Windows, útil quando o Explorer trava, fica lento ou apresenta comportamento anormal.
 
-## Instruções de Uso:
+## ⚙️ Instruções de Uso
 
-1. **Execute como Administrador:**
-   Certifique-se de executar o script com privilégios de administrador para garantir que ele tenha as permissões necessárias para reiniciar o processo Explorer.
+1. **Execute como Administrador:**  
+   Clique com o botão direito no arquivo `Reiniciar Explorer.bat` e selecione “Executar como administrador”. Isso garante que o script tenha as permissões necessárias para finalizar e reiniciar o processo do Explorer.
 
-2. **Edite o Script (Opcional):**
-   Se necessário, abra o arquivo do script (.bat) em um editor de texto para ajustar as configurações conforme suas necessidades específicas.
+2. **Edite o Script (Opcional):**  
+   Você pode abrir o arquivo `.bat` em um editor de texto (como Notepad++) caso queira customizar algo no processo (ex: adicionar logs, alertas etc.).
 
-3. **Execução:**
-   Duplo clique no arquivo "reiniciar_explorer.bat" para executar o script. Alternativamente, você pode executá-lo a partir do prompt de comando.
+3. **Executar:**  
+   - Dê dois cliques no arquivo `Reiniciar Explorer.bat`  
+   - Ou execute via Prompt de Comando com:
+     ```
+     Reiniciar Explorer.bat
+     ```
 
-4. **Verifique o Resultado:**
-   Após a execução do script, o processo Explorer será reiniciado. Verifique se o Explorer reiniciou corretamente.
+4. **Verifique o Resultado:**  
+   Após a execução, a área de trabalho desaparecerá por um instante e será restaurada assim que o Explorer for reiniciado. Isso é esperado.
 
-## Aviso:
+## ⚠️ Aviso Importante
 
-Este script encerra o processo Explorer e inicia um novo. Isso pode causar a perda temporária da área de trabalho. Certifique-se de salvar qualquer trabalho em andamento antes de executar o script.
+Este script encerra o processo `Explorer.exe` e o reinicia.  
+Durante esse tempo, você pode perder temporariamente acesso à barra de tarefas, área de trabalho e janelas abertas.  
+**Salve seu trabalho antes de executar!**
 
-## Contribuições:
+## 🛠️ Exemplo do Script
 
-Contribuições e sugestões são bem-vindas. Sinta-se à vontade para melhorar o script e compartilhar suas alterações.
+```bat
+taskkill /f /im explorer.exe
+start explorer.exe
+exit
 
----
+🤝 Contribuições
+Contribuições são bem-vindas!
+Se quiser sugerir melhorias, adicionar validações ou incluir feedback visual para o usuário, abra uma issue ou envie um pull request.
 
-**Nota:**
-Este script é fornecido "como está", e o autor não se responsabiliza por quaisquer danos causados pelo seu uso. Use por sua conta e risco.
+📝 Nota Legal
+Este script é fornecido “no estado em que se encontra”.
+O autor não se responsabiliza por eventuais danos, uso incorreto ou impactos no sistema.
+Use por sua conta e risco.
+
+📜 Licença
+Este projeto está licenciado sob os termos da MIT License.
